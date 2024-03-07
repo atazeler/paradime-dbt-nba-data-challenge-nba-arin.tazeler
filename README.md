@@ -1,7 +1,13 @@
-# dbt™ Data Modeling Challenge - NBA Edition
+# NBA Draft Analyses
+## Introduction
+Hello, thank you for being interested in my analyses of some NBA related data, more specifically on NBA draft. I won't be going into what NBA is but for those who are not very familiar with it, NBA draft is a yearly event where teams are selecting young, up and coming talents that declare their intentions to play in NBA. As a big fan of the league, I think the draft system is one of the main reasons why NBA is such a popular league not only in North America but also globally. 
 
-Welcome to the [Paradime dbt™ Data Modeling Challenge - NBA Edition](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#)!
+While its not that simple basic system of the draft is like following: 
+In the modern NBA by default every team gets 2 draft picks, one for the first round, another for the second round. The worse a team's record is in the year, more likely they will land a higher draft pick in that year's NBA draft. This way the league tries to have some sort of balance in the league so no single team can dominate the league for year after year since that team will be unlikely to find new star talent in the draft as they will be drafting players at lower spots while their current roster ages hence team starts to be less and less successful. 
 
+For general managers (GM) and front offices (FO) of the teams draft is obviously very important and its not only for scouting new talent reasons, because you can trade draft picks with other picks as well as players. Ideally a GM tries to build a team where all of its players' peaks are more or less aligned so your window of championship is as long as possible. For example if you have a young promising core but some older star players, you may wanna rebuild your team by trading your star players for some high draft picks. But doing that you should also consider that a young player probably won't be contributing positively to the team immedately.
+
+In my analyses below im mostly taking the role of a GM building a team and try to come up with some draft strategies.
 ## Table of Contents
 1. [Getting Started](#getting-started)
    - [Registration and Verification](#step-1-registration-and-verification)
@@ -11,119 +17,6 @@ Welcome to the [Paradime dbt™ Data Modeling Challenge - NBA Edition](https://w
 2. [Competition Details](#competition-details)
 3. [Building Your Project](#building-your-project)
 4. [Example Submission](#example-submission)
-
----
-
-## Getting Started
-
-### Step 1: Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-registration-form).
-- **Verification by Paradime**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-how-it-works-2).
-
-### Step 2: Account Set-Up
-After verification, you'll receive two emails from Paradime:
-1. **Snowflake Account Credentials**: Contains your Snowflake account details. Search for an email with subject line "*Start Your NBA Data Modeling Challenge – Your Snowflake Credentials*."
-2. **Paradime Platform Invitation**: An invitation to access the Paradime Platform. Search for an email with the subject line "*[Paradime] Activate your account*."
-
-### Step 3: Paradime Account Configuration
-- **Access Paradime**: Use the provided credentials to log into your account. Join the Paradime workspace using the invite email.
-- **Snowflake Integration**: Add Snowflake credentials (Username, Password, Role, Database) to Paradime.
-- **Act Fast - Limited Time Activation**: The links to activate your Paradime account expire within 24 hours!
-
-Note: A step-by-step tutorial is available in you Snowflake credentials email, "*Start Your NBA Data Modeling Challenge – Your Snowflake Credentials*".
-
-### Step 4: Kickstart Your Project
-- **Create a New Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "nba-<your_email>"
-- **Start Developing**: Begin crafting SQL queries, developing dbt™ models, and generating insights!
-   ![Start Developing in Paradime](link_to_arcade_screenshot)
-note: If you login to snowflake, your default role is public. Swith your role to the one we provide in the email "NAME_ANALYTICS" (role name also provided in snowflake email. 
-
-**Need Help?**: Check out [this step-by-step video tutorial](https://app.arcade.software/share/9JaKC9DmaGYBTW1sWlhf), and join the #nba-challenge channel on [Slack](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email) for assistance.
-
----
-
-## Competition Details
-- **[Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-how-it-works-2)**
-- **[Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-how-it-works-2)**
-- **[Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-how-it-works-2)**
-
----
-## Building Your Project
-
-Now that you're set up, you have until March 8, 2024 to complete and submit your project!
-
-### Step 1: Getting to Know the Paradime
-
-- **The Paradime Editor**: Dive into the Paradime Editor with this step-by-step, [interactive guide](https://app.arcade.software/share/9JaKC9DmaGYBTW1sWlhf). It's designed to familiarize you with the core functionalities and of the editor, and get your familiar with the Project. 
-- **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
-
-### Step 2: Getting to Know the NBA Data
-
-Paradime has pre-loaded your Snowflake account with 7 historical NBA datasets, offering comprehensive and detailed statistics about games, players, teams, salaries, and more, typically covering the years 1947-2023. Familiarize yourself with these datasets through various resources:
-
-- **In Snowflake**: Directly explore the datasets in [Snowflake](https://app.snowflake.com/kbuwhsf/xrb98600) for hands-on analysis.
-- **GitHub Repository Resources**:
-  - [Staging Files](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/tree/main/models/sources): These files provide a preliminary view and structure of the datasets available in this repository.
-  - [schema.yml File](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/schema.yml): This file contains schema definitions, helping you understand the data models and their relationships.
-- **Paradime Catalog UI**: Use the [Paradime Catalog UI](https://app.paradime.io/catalog/search) for an interactive exploration of the datasets, featuring intuitive search and navigation.
-
-### Step 3: Generating Insights
-
-Your primary goal is to construct dbt™ models that unearth compelling insights, captivating NBA fans and/or General Managers. With seven distinct datasets at your disposal, the possibilities for discovery are virtually limitless. This is your playground to innovate and explore the depths of NBA data.
-
-Before diving in, ensure you're familiar with the [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-how-it-works-2) so you've got a chance to win the [$500-$1500 Amazon gift cards](https://www.paradime.io/dbt-data-modeling-challenge-nba-edition#div-whats-in-it-for-you)!
-
-Need a spark of inspiration? Check out the [example submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge?tab=readme-ov-file#example-submission), and here are some additional suggestions to kickstart your analytical journey:
-
-- **Second-Round Draft Picks**: Who stands out among the historically best second-round picks?
-      - Data Required: *[common_player_info](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_common_player_info.sql)*
-- **International Player Impact**: Which international players (Not born in the USA) have made the biggest mark in the NBA?
-      - Data Required: *[common_player_info](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_common_player_info.sql)*
-- **Efficiency in Spending**: Analyze which teams/players have gotten the most (or least!) value for their money.
-      - Data Required: *[team_spend_by_season](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_team_spend_by_season.sql)*, *[team_stats_by_season](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_team_stats_by_season.sql)*
-- **Performance Shifts**: Investigate players whose performance changes between the regular season and playoffs.
-      - Data Required: *[player_game_logs](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_player_game_logs.sql)*
-- **Contracts and Contributions**: Who are the NBA's most overpaid or underpaid players?
-   - Data Required: *[player_salaries_by_season](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_player_salaries_by_season.sql)*, *[player_game_logs](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_player_game_logs.sql)*
-- **Unexpected Playoff Outcomes**: Explore the anomalies - teams that defied odds, or underperformed, in the Playoffs
-  - Data Required: *[team_stats_by_season](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/models/sources/stg_team_stats_by_season.sql)*
-
-### Creating Data Visualizations
-When it comes to visualizing your insights, you have a variety of tools at your disposal, including basic options like Excel and Google Sheets. Here are some common methods you can consider:
-- **Cloud BI Platforms**: Utilize platforms like Power BI, Lightdash, Metabase, Preset, Tableau, Looker, Sigma, and more. Simply use the Snowflake credentials we provided to connect these platforms to your data.
-- **[Snowflake's Snowsight](https://docs.snowflake.com/en/user-guide/ui-snowsight-visualizations)**: Create visualizations directly within your provided Snowflake account, taking advantage of Snowflake's built-in visualization capabilities.
-- **[Download CSV](https://docs.paradime.io/app-help/code-ide/data-preview#download-csv)**: For a straightforward approach, export the data behind your dbt™ models from Snowflake to .csv files. This method was used in the [example submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge?tab=readme-ov-file#example-submission). Please note: if you opt for exporting to .csv, our judges will verify that the exported data accurately reflects the data behind your dbt™ models!
-
-Remember, the choice of tool is yours – select one that best fits your style and project needs!
-
-### Submitting Your Project
-**Submission Deadline:** March 8th, 2024
-Once your project is complete, please submit the following materials to Parker Rogers (parker@paradime.io) with Subject Line "<your_name> - NBA Data Modeling Challenge Submission":
-- **GitHub Repository**: Send the link to your GitHub repository containing your dbt™ models.
-- **README.md**: Include a README file that narrates your project's story, methodology, and insights. Check out this [example README](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#example-submission).
-- **Data Visualizations and Insights**: Showcase your findings, ideally within your README.md. For inspiration, refer to these [example visualizations](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#visualizations).
-
-We look forward to seeing your creative and insightful analyses!
-
-# Example Submission
-Here's an example project that fulfills all requirements and would be elligble eligible for cash prizes. Feel free to use this template for your submission. 
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
-3. [Methodology](#methodology)
-   - [Tools Used](#tools-used)
-   - [Applied Techniques](#applied-techniques)
-4. [Visualizations](#visualizations)
-   - [Team Playoff Appearances](#team-playoff-appearances)
-   - [Player Playoff Games](#player-playoff-games)
-   - [Top Playoff Scorers](#top-playoff-scorers)
-   - [Top Regular Season Scorers](#top-regular-season-scorers)
-   - [NBA Players by University](#nba-players-by-university)
-5. [Conclusions](#conclusions)
-
-## Introduction
-Explore my project for the _dbt™ data modeling challenge - NBA Edition_, Hosted by [Paradime](https://www.paradime.io/)! This project dives into the analysis and visualization of NBA statistics, designed for basketball enthusiasts and analysts.
 
 ### [My GitHub repo](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/?tab=readme-ov-file#my-github-repo)
 
@@ -137,7 +30,7 @@ My analysis leverages three key NBA datasets from Paradime:
 ### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **Google Sheets** for data visualization.
+- **Sigma** for data visualization.
 
 ### Applied Techniques
 - SQL and dbt™ to transform _stg_player_game_logs_ into seasonal player statistics
