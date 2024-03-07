@@ -8,23 +8,23 @@ In the modern NBA by default every team gets 2 draft picks, one for the first ro
 For general managers (GM) and front offices (FO) of the teams draft is obviously very important and its not only for scouting new talent reasons, because you can trade draft picks with other picks as well as players. Ideally a GM tries to build a team where all of its players' peaks are more or less aligned so your window of championship is as long as possible. For example if you have a young promising core but some older star players, you may wanna rebuild your team by trading your star players for some high draft picks. But doing that you should also consider that a young player probably won't be contributing positively to the team immedately.
 
 In my analyses below im mostly taking the role of a GM building a team and try to come up with some draft strategies.
-## Table of Contents
-1. [Getting Started](#getting-started)
-   - [Registration and Verification](#step-1-registration-and-verification)
-   - [Account Set-Up](#step-2-account-set-up)
-   - [Paradime Account Configuration](#step-3-paradime-account-configuration)
-   - [Kickstart Your Project](#step-4-kickstart-your-project)
-2. [Competition Details](#competition-details)
-3. [Building Your Project](#building-your-project)
-4. [Example Submission](#example-submission)
 
-### [My GitHub repo](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/?tab=readme-ov-file#my-github-repo)
+### [My GitHub repo]([https://github.com/paradime-io/paradime-dbt-nba-data-challenge/?tab=readme-ov-file#my-github-repo](https://github.com/atazeler/paradime-dbt-nba-data-challenge-nba-arin.tazeler/tree/master))
 
-## Data Sources
-My analysis leverages three key NBA datasets from Paradime:
-- *PLAYER_GAME_LOGS*
-- *TEAM_STATS_BY_SEASON*
-- *COMMON_PLAYER_INFO*
+## Data Sources and DAG
+![image](https://github.com/atazeler/paradime-dbt-nba-data-challenge-nba-arin.tazeler/assets/107131288/17edb9b6-7ae9-4b1b-b5ea-1e4db6fae474)
+- I treated the dbt project as if i'm part of an organisation so i tried to build models so that intermediate models are more modular and can be used as singe source of truth for other presentation tables as well. 
+- I didn't change the folder structure as the standard `stg`, `int`, `fact`/`mart`/`presentation` format is sufficient here.
+- I didn't update the `.yml` files with new columns or tests since im the only one working on this.
+- Existing `stg` models were sufficient so didn't touch them.
+
+### Intermediate models:
+- `int_player_common_info`: This model has the static player info that doesn't change over seasons such as name, birth date, draft position, debut age, etc. Unique on `player_id`.
+- `int_player_common_info_by_season`: This model has player information that changes from season to season (besides stats) such as age, nba tenure, salary and booleans on whether its the player's rookie season or last season. Unique on `player_id`, -`season` combination.
+- `int_player_stats_by_season`: This model has player stats split by regular season and playoffs. Unique on `player_id`, `season` combination.
+### Presentation model:
+- `presentation_players_by_season`: This model joins the 3 above intermediate models. Unique on `player_id`, `season` combination.
+
 
 ## Methodology
 ### Tools Used
