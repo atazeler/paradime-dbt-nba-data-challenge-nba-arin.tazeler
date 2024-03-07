@@ -9,7 +9,7 @@ For general managers (GM) and front offices (FO) of the teams draft is obviously
 
 In my analyses below im mostly taking the role of a GM building a team and try to come up with some draft strategies.
 
-### [Github Repo]https://github.com/atazeler/paradime-dbt-nba-data-challenge-nba-arin.tazeler/tree/master
+### [Github Repo](https://github.com/atazeler/paradime-dbt-nba-data-challenge-nba-arin.tazeler/tree/master)
 ## Data Sources and DAG
 ![image](https://github.com/atazeler/paradime-dbt-nba-data-challenge-nba-arin.tazeler/assets/107131288/17edb9b6-7ae9-4b1b-b5ea-1e4db6fae474)
 - I treated the dbt project as if i'm part of an organisation so i tried to build models so that intermediate models are more modular and can be used as singe source of truth for other presentation tables as well. 
